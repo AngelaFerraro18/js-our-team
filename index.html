@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Yusei+Magic&display=swap" rel="stylesheet">
-    
+
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,6 +27,8 @@
 
     <!-- corpo della pagina -->
     <main>
+
+        <!-- sezione cards dei membri del team -->
         <div class="cards-grid">
             <div class="member-card">
                 <img src="img/male1.png" alt="ragazzo-1">
@@ -36,8 +38,24 @@
                     <a href="#">marcobianchi@team.com</a>
                 </div>
             </div>
-
         </div>
+
+        <!-- form per gli utenti -->
+
+        <form action="index.html">
+            <h2>Vuoi entrare a far parte del team? Invia i tuoi dati!</h2>
+            <div class="user-inputs">
+                <label for="name-input">Nome e cognome</label>
+                <input id="name-input" type="text" placeholder="Scrivi il tuo nome e cognome">
+                <label for="role-input">Ruolo</label>
+                <input id="role-input" type="text" placeholder="Scrivi il tuo ruolo">
+                <label for="email-input">Email</label>
+                <input id="email-input" type="email" placeholder="Scrivi la tua email">
+            
+                <button>Invia</button>
+            </div>
+        </form>
+
     </main>
 
     <!-- main js -->
