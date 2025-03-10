@@ -1,0 +1,24 @@
+@media screen and (max-width: 576px){
+    body.container {
+        max-width: 576px;
+        width: 100%;
+    }
+    
+    main div.member-card {
+        width: calc((100% - 40px) / 2);
+        display: block;
+    }
+
+    main div.member-card img{
+        width: 100%;
+    }
+
+    main div.info-card {  
+        padding: 10px 25px;
+        text-align: center;
+    }
+    
+
+
+
+}

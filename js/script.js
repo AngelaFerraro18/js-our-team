@@ -41,7 +41,7 @@ const teamMembers = [
 const cardGridElement = document.querySelector('.cards-grid');
 
 //creo un ciclo for per creare gli elementi da aggiungere all'HTML 
-for (let i = 1; i < teamMembers.length; i++) {
+for (let i = 0; i < teamMembers.length; i++) {
 
   const currentMember = teamMembers[i];
 
