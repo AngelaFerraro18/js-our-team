@@ -21,3 +21,8 @@ header h1 {
     font-weight: 900;
 
 }
+
+header p{
+    text-align: center;
+    margin-bottom: 85px;
+}
