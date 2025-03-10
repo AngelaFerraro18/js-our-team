@@ -37,5 +37,26 @@ const teamMembers = [
   }
 ];
 
+const cardGridElement = document.querySelector('.cards-grid');
+console.log(cardGridElement);
 
-console.log('ciao');
+for (let i = 1; i < teamMembers.length; i++) {
+
+  const currentMember = teamMembers[i];
+  console.log(currentMember.name);
+
+  const cardsElement = document.createElement('div');
+  // console.log(cardsElement);
+
+  cardsElement.classList.add('member-card');
+  cardGridElement.appendChild(cardsElement);
+
+  cardsElement.innerHTML = `<img src="${currentMember.img}" alt="${currentMember.name}">
+                <div class="info-card">
+                    <h2>${currentMember.name}</h2>
+                    <span>${currentMember.role}</span>
+                    <a href="#">${currentMember.email}</a>
+                </div>`;
+
+
+}
