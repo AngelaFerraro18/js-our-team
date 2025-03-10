@@ -37,26 +37,80 @@ const teamMembers = [
   }
 ];
 
+// salvo in una variabile il valore dell'elemento div con classe cards-grid
 const cardGridElement = document.querySelector('.cards-grid');
-console.log(cardGridElement);
 
+//creo un ciclo for per creare gli elementi da aggiungere all'HTML 
 for (let i = 1; i < teamMembers.length; i++) {
 
   const currentMember = teamMembers[i];
-  console.log(currentMember.name);
 
   const cardsElement = document.createElement('div');
-  // console.log(cardsElement);
 
   cardsElement.classList.add('member-card');
   cardGridElement.appendChild(cardsElement);
 
-  cardsElement.innerHTML = `<img src="${currentMember.img}" alt="${currentMember.name}">
-                <div class="info-card">
-                    <h2>${currentMember.name}</h2>
-                    <span>${currentMember.role}</span>
-                    <a href="#">${currentMember.email}</a>
-                </div>`;
+  cardsElement.innerHTML = addInfoCard(currentMember);
+}
 
 
+// creo una variabile dove salvo il valore del form dell'html
+const formElement = document.getElementById('form-user');
+console.log(formElement);
+
+//creo delle variabili dove salvo i vari input
+const nameUserElement = document.getElementById('name-input');
+console.log(nameUserElement);
+const roleUserElement = document.getElementById('role-input');
+console.log(roleUserElement);
+const emailUserElement = document.getElementById('email-input');
+console.log(emailUserElement);
+const imgUserElement = document.getElementById('img-input');
+console.log(imgUserElement);
+
+//creo l'evento dove invierò i dati con il form
+formElement.addEventListener('submit', function (e) {
+
+  e.preventDefault();
+
+  const name = nameUserElement.value;
+  const role = roleUserElement.value;
+  const email = emailUserElement.value;
+  const img = imgUserElement.value;
+
+  let newObject = {
+    name,
+    role,
+    email,
+    img
+  }
+
+  teamMembers.push(newObject);
+  formElement.reset();
+  console.log(teamMembers);
+
+
+
+  const cardsElement = document.createElement('div');
+
+  cardsElement.classList.add('member-card');
+  cardGridElement.appendChild(cardsElement);
+
+  cardsElement.innerHTML = addInfoCard(newObject);
+
+
+
+})
+
+
+
+/* funzioni */
+
+function addInfoCard(obj) {
+  return `<img src="${obj.img}" alt="${obj.name}">
+                            <div class="info-card">
+                                <h2>${obj.name}</h2>
+                                <span>${obj.role}</span>
+                                <a href="#">${obj.email}</a>
+                            </div>`;
 }
