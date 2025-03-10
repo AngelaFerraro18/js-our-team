@@ -103,4 +103,13 @@ main form div.user-inputs> input{
 main form div.user-inputs button{
     width: 100px;
     padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+main form div.user-inputs button:hover{
+    background-color: #d6608a;
+    border-color: #e53170;
+    color: #fff;
 }
