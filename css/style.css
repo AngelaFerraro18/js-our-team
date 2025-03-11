@@ -106,10 +106,14 @@ main form div.user-inputs button{
     border-radius: 5px;
     background-color: #fff;
     color: #000;
+    border-style: none;
+    border: 0.5px solid #000;
+    transition: border-color, box-shadow;
 }
 
 main form div.user-inputs button:hover{
     background-color: #d6608a;
-    border-color: #e53170;
+    border: 1px solid #e53170;
     color: #fff;
+    box-shadow: 0 0 10px #e12265;
 }
